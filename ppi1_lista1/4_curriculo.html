@@ -1,36 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculo</title>
 
     <style>
-        img{
+        img {
             border-radius: 100%;
             max-width: 200px;
             border: 1px solid rgb(19, 0, 115);
         }
-         table,td, th, caption{
-                border: 2px solid #340b3a; border-collapse: collapse; 
-        }
-         #tabela-horarios, #tabela-horarios td, #tabela-horarios, th, captionth, caption{
-                border: 2px 
-                solid #251f97e6;
-                border-collapse: collapse;
-                margin-left: auto;
-                margin-right: auto;
+
+        table,
+        td,
+        th,
+        caption {
+            border: 2px solid #340b3a;
+            border-collapse: collapse;
         }
 
-        #Maria{
+        #tabela-horarios,
+        #tabela-horarios td,
+        #tabela-horarios,
+        th,
+        captionth,
+        caption {
+            border: 2px solid #251f97e6;
+            border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #nome_foto,
+        #Foto {
+            width: 420px;
             display: flex;
             background-color: rgb(170, 170, 235);
         }
-
-        
-        
     </style>
 </head>
+
 <body>
 
     <nav>
@@ -45,58 +56,64 @@
     </nav>
 
 
-        <h1>Maria Alice</h2>
-        <img src="./img/mulher.jpeg" alt="">
-    
+    <div id="nome_foto">
+        <div id="Nome">
+            <h1>Maria Alice</h2>
+        </div>
+        <img id="Foto" src="./img/mulher.jpeg" alt="">
+    </div>
 
-        <h2>Contato</h2>
-        <p></p>
-        <p>Email: <a href="mailto:maria.alice@gmail.com">maria.alice@gmail.com</a></p>
-        <p>Telefone: <a href="tel:554799307890">(47) 9930-7890</a></p>
-        <p>link externo para o linkedin: <a href="https://www.linkedin.com/sales/login">www.linkedin.com/sales/login</a></p>
+    <h2>Contato</h2>
+    <p></p>
+    <p>Email: <a href="mailto:maria.alice@gmail.com">maria.alice@gmail.com</a></p>
+    <p>Telefone: <a href="tel:554799307890">(47) 9930-7890</a></p>
+    <p>link externo para o linkedin: <a href="https://www.linkedin.com/sales/login">www.linkedin.com/sales/login</a>
+    </p>
     </div>
 
     <hr>
 
     <div id="sobremim">
         <h2>Sobre mim</h2>
-        <p>Olá! Sou Maria Alice, tenho 32 anos e sou escritora experiente com sucesso na escrita e publicações de ficção cientifica. </p>
+        <p>Olá! Sou Maria Alice, tenho 32 anos e sou escritora experiente com sucesso na escrita e publicações de
+            ficção cientifica. </p>
     </div>
 
     <hr>
 
-        <div id="habilidades">
-            <h2>Habilidades técnicas</h2>
-            <ul>
-                <li>Domínio da Língua e Gramática</li>
-                <li>Escrita criativa</li>
-                <li>Pesquisa literária</li>
-                <li>Revisão de textos</li>
-            </ul>
-        </div>
+    <div id="habilidades">
+        <h2>Habilidades técnicas</h2>
+        <ul>
+            <li>Domínio da Língua e Gramática</li>
+            <li>Escrita criativa</li>
+            <li>Pesquisa literária</li>
+            <li>Revisão de textos</li>
+        </ul>
+    </div>
 
     <hr>
 
-        <div id="formação">
-            <h2>Formação acadêmica</h2> 
-            <ul>
-                <li>Graduação em licenciatura</li>
-                <li>Universidade de São Paulo</li>
-            </ul> 
-        </div>
+    <div id="formação">
+        <h2>Formação acadêmica</h2>
+        <ul>
+            <li>Graduação em licenciatura</li>
+            <li>Universidade de São Paulo</li>
+        </ul>
+    </div>
 
     <hr>
 
-        <div id="experiencia">
-            <h2>Experiência profissional</h2>
-        
-            <h3>Autora de ficção cientifica</h2>
+    <div id="experiencia">
+        <h2>Experiência profissional</h2>
+
+        <h3>Autora de ficção cientifica</h2>
             <ol>
                 <li><strong>Autora de mais de 20 livros de ficção cientifica</strong></li>
-                <li><mark>Atuei em parceria com <o>editoras de prestigío nas etapas de desenvolvimento de minhas obras</mark></li>
+                <li><mark>Atuei em parceria com <o>editoras de prestigío nas etapas de desenvolvimento de minhas
+                            obras</mark></li>
                 <li>Tenho em média 4.2 nas avaliações dos meus leitores</li>
             </ol>
-        </div>
+    </div>
 
     <hr>
 
@@ -105,8 +122,8 @@
         <details>
             <summary><b>Clique aqui para ver a grade de horário</b></summary>
             <table id="tabela-horarios">
-            <caption>Grade de horários</caption>
-                    <thead>
+                <caption>Grade de horários</caption>
+                <thead>
                     <tr>
                         <th>Horário</th>
                         <th>Segunda</th>
@@ -116,47 +133,48 @@
                         <th>Sexta</th>
                     </tr>
 
-                    </thead>
+                </thead>
 
-                    <tbody>
-                        <tr>
-                            <td>7:20-8:20</td>
-                            <td rowspan="2">Matemática</td>
-                            <td rowspan="2">Português</td>
-                            <td>Física</td>
-                            <td rowspan="2">Biologia</td>
-                            <td rowspan="2">História</td>
-                        </tr>
-                        <tr>
-                            <td>8:20-9:20</td>
-                            <td>Inglês</td>
-                        </tr>
+                <tbody>
+                    <tr>
+                        <td>7:20-8:20</td>
+                        <td rowspan="2">Matemática</td>
+                        <td rowspan="2">Português</td>
+                        <td>Física</td>
+                        <td rowspan="2">Biologia</td>
+                        <td rowspan="2">História</td>
+                    </tr>
+                    <tr>
+                        <td>8:20-9:20</td>
+                        <td>Inglês</td>
+                    </tr>
 
-                        <tr>
-                            <td>9:20-9:40</td>
-                            <td>Intervalo</td>
-                            <td>Intervalo</td>
-                            <td>Intervalo</td>
-                            <td>Intervalo</td>
-                            <td>Intervalo</td>
-                        </tr>
+                    <tr>
+                        <td>9:20-9:40</td>
+                        <td>Intervalo</td>
+                        <td>Intervalo</td>
+                        <td>Intervalo</td>
+                        <td>Intervalo</td>
+                        <td>Intervalo</td>
+                    </tr>
 
-                        <tr>
-                            <td>9:40-10:40</td>
-                            <td rowspan="2">Sociologia</td>
-                            <td rowspan="2">Artes</td>
-                            <td rowspan="2">Ed.Física</td>
-                            <td>Física</td>
-                            <td>Inglês</td>
-                        </tr>
+                    <tr>
+                        <td>9:40-10:40</td>
+                        <td rowspan="2">Sociologia</td>
+                        <td rowspan="2">Artes</td>
+                        <td rowspan="2">Ed.Física</td>
+                        <td>Física</td>
+                        <td>Inglês</td>
+                    </tr>
 
-                        <tr>
-                            <td>10:40-11:40</td>
-                            <td>Matemática</td>
-                            <td>Português</td>
-                        </tr>
+                    <tr>
+                        <td>10:40-11:40</td>
+                        <td>Matemática</td>
+                        <td>Português</td>
+                    </tr>
             </table>
         </details>
     </div>
 </body>
+
 </html>
