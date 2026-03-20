@@ -1,151 +1,159 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de contato</title>
     <style>
-        #titulo{
+        #titulo {
             font-family: sans-serif;
             color: rgb(19, 0, 115);
         }
 
-        #nome{
-            display: flex;        
-            align-items: center;    
+        #nome {
+            display: flex;
+            align-items: center;
             justify-content: center;
-            gap: 5px;              
+            gap: 5px;
             text-align: center;
         }
-        #email{
-            display: flex;        
-            align-items: center;    
-            justify-content: center;
-            gap: 5px;              
-            text-align: center;
-        }
-        #assunto{
-            display: flex;        
-            align-items: center;    
-            justify-content: center;
-            gap: 5px;              
-            text-align: center;
-        }
-        #estado{
-            display: flex;        
-            align-items: center;    
-            justify-content: center;
-            gap: 5px;              
-            text-align: center;
-        }
-        #mensagem{
-            display: flex;        
-            align-items: center;    
-            justify-content: center;
-            gap: 5px;              
-            text-align: center;
-        }
-        #input{
-             display: flex;        
-            align-items: center;    
-            justify-content: center;
-            gap: 5px;              
-            text-align: center;
-        }
-        #titulo{
-            align-items: center;    
-            justify-content: center;
-            gap: 5px;              
-            text-align: center;
-        }
-        #instrucoes{
-            align-items: center;    
-            justify-content: center;
-            gap: 5px;              
-            text-align: center;
-        }
-        
 
-       
+        #email {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            text-align: center;
+        }
+
+        #assunto {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            text-align: center;
+        }
+
+        #estado {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            text-align: center;
+        }
+
+        #mensagem {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            text-align: center;
+        }
+
+        #input {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            text-align: center;
+        }
+
+        #titulo {
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            text-align: center;
+        }
+
+        #instrucoes {
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            text-align: center;
+        }
     </style>
 </head>
+
 <body>
-    
+
     <div id="titulo">
-    <h1>Formulário de contato</h1>
+        <h1>Formulário de contato</h1>
     </div>
-    <div id= "instrucoes" class="header-instrucao">
-        <p>Preencha todos os campos obrigatórios abaixo <br> Todos com * são obrigatórios. <br>Caso precisar, consulte seu curriculo: <a href="4_curriculo.html">Voltar para curriculo</a></p>
+    <div id="instrucoes" class="header-instrucao">
+        <p>Preencha todos os campos obrigatórios abaixo <br> Todos com * são obrigatórios. <br>Caso precisar, consulte
+            seu curriculo: <a href="4_curriculo.html">Voltar para curriculo</a></p>
     </div>
 
-        <form id="form" action="">
+    <form id="form" action="">
 
-            <div id="nome">
+        <div id="nome">
             <label for="nome">*Nome: </label>
             <input placeholder="Digite seu nome completo" id="nome" type="text" required>
-            </div>
+        </div>
 
-            <br>
+        <br>
 
-            <div id="email">
-                <label for="email">*E-Mail: </label>
-                <input placeholder="Digite seu email" id="email" type="email" required>
-            </div>
-            <br>
+        <div id="email">
+            <label for="email">*E-Mail: </label>
+            <input placeholder="Digite seu email" id="email" type="email" required>
+        </div>
+        <br>
 
-            <div id="assunto">
+        <div id="assunto">
             <label for="assunto">Assunto:</label>
-            <input placeholder="Escreva o assunto aqui" id="assunto" type= "text">
-            </div>
+            <input placeholder="Escreva o assunto aqui" id="assunto" type="text">
+        </div>
 
-            <br>
+        <br>
 
-            <div id="estado">
-                <label for="estado">Estado:</label>
-                <select id="estado" type="name">
-                    <option value="">AC</option>
-                    <option value="">AL</option>
-                    <option value="">AP</option>
-                    <option value="">AM</option>
-                    <option value="">BA</option>
-                    <option value="">CE</option>
-                    <option value="">DF</option>
-                    <option value="">ES</option>
-                    <option value="">GO</option>
-                    <option value="">MA</option>
-                    <option value="">MT</option>
-                    <option value="">MS</option>
-                    <option value="">MG</option>
-                    <option value="">PA</option>
-                    <option value="">PB</option>
-                    <option value="">PR</option>
-                    <option value="">PE</option>
-                    <option value="">PI</option>
-                    <option value="">RJ</option>
-                    <option value="">RN</option>
-                    <option value="">RS</option>
-                    <option value="">RO</option>
-                    <option value="">RR</option>
-                    <option value="">SC</option>
-                    <option value="">SP</option>
-                    <option value="">SE</option>
-                    <option value="">TO</option>
-                </select>
-            </div>
+        <div id="estado">
+            <label for="estado">Estado:</label>
+            <select id="estado" type="name">
+                <option value="">AC</option>
+                <option value="">AL</option>
+                <option value="">AP</option>
+                <option value="">AM</option>
+                <option value="">BA</option>
+                <option value="">CE</option>
+                <option value="">DF</option>
+                <option value="">ES</option>
+                <option value="">GO</option>
+                <option value="">MA</option>
+                <option value="">MT</option>
+                <option value="">MS</option>
+                <option value="">MG</option>
+                <option value="">PA</option>
+                <option value="">PB</option>
+                <option value="">PR</option>
+                <option value="">PE</option>
+                <option value="">PI</option>
+                <option value="">RJ</option>
+                <option value="">RN</option>
+                <option value="">RS</option>
+                <option value="">RO</option>
+                <option value="">RR</option>
+                <option value="">SC</option>
+                <option value="">SP</option>
+                <option value="">SE</option>
+                <option value="">TO</option>
+            </select>
+        </div>
 
-            <br>
+        <br>
 
-            <div id="mensagem">
+        <div id="mensagem">
             <label for="mensagem">Mensagem:</label>
             <input placeholder="Escreva sua mensagem aqui" id="mensagem" type="text">
-            </div>
+        </div>
 
-            <br>
+        <br>
 
-            <div id="input">
-            <input type= "submit" value="submit">
+        <div id="input">
+            <input type="submit" value="submit">
             <button>Enviar</button>
-            </div>
+        </div>
     </form>
 </body>
+
 </html>
