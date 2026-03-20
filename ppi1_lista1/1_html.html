@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos da Web e HTML</title>
+
+    <style>
+        #sputnik {
+            max-width: 400px;
+            border: 1px solid rgb(19, 0, 115);
+        }
+
+        #timberner {
+            max-width: 400px;
+            border: 1px solid rgb(19, 0, 115);
+        }
+
+        #titulo {
+            font-family: sans-serif;
+        }
+
+        #tabela-tempo,
+        #tabela-tempo td,
+        #tabela-tempo,
+        th,
+        captionth,
+        caption {
+            border: 2px solid #220a4fe6;
+            border-collapse: collapse;
+        }
+
+        #tabela-tempo td,
+        #tabela-tempo th {
+            text-align: center;
+        }
+
+        #tabela-estados tr:nth-child(2n) {
+            background-color: rgb(229, 197, 233);
+        }
+
+        #tabela-tempo caption {
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        #tabela-tempo caption {
+            border-radius: 10px 10px 5px 5px;
+        }
+        figure{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="titulo">
+        <h1>Fundamentos da Web e HTML</h1>
+    </div>
+    <h2>Diferença entre internet e web</h2>
+    <p>Internet é a rede que conecta globalmente todos os servidores do mundo. A Web é uma <i>ferramenta da
+            Internet</i>.
+        <br>Ou seja, A internet é interconexão de redes de computadores, possibilitando a oferta de diversos serviços
+        entre eles e-mail, mirc, dns, ftp, ssh, rdp, telnet web e outros.
+    </p>
+    <!--Autor: Tim Berner Lee, Data de criação: 1989-->
+    <hr>
+
+    <div id="card">
+        <h2>História da internet e web</h2>
+
+        <h3>Internet</h3>
+
+        <p>A internet surgiu durante a <em>guerra fria</em>. Em 1957, a União Soviética lançou o primeiro setélite
+            artificial, que após isso iniciou a corrida espacial devido ao temor que os americanos sentiam pela
+            possibilidade de seus inimigos serem espionados pela união soviética e ela os vencesse. Por conta disso, os
+            americanos começaram a pensar mais seriamente sobre ciência e tecnologia.</p>
+
+        <figure>
+            <figcaption>Imagem 1 - Sputnik </figcaption>
+            <img id="sputnik" src="./img/sputnik.jpg" alt="">
+            <figcaption>Fonte: <a href="https://pt.wikipedia.org/wiki/Sputnik">https://pt.wikipedia.org/wiki/Sputnik</a></figcaption>
+        </figure>
+        
+
+
+        <p>Não demorou muito para que, em 1958, a US Administration passasse a financiar várias agências, sendo uma delas a <sup>ARPA</sup>. 
+        Sem a ARPA, a Internet não existiria. Foi por causa dessa instituição que foi criada a primeira versão da Internet, a <a href="
+            https://en.wikipedia.org/wiki/ARPANET">ARPANET</a>. Posteriomente, foi construido uma rede de computadores
+        cujo objetivo era compartilhar recursos, fossem dados, descobertas ou aplicações. <br>
+        Desde os primórdios da ARPANET, ainda faltava uma linguagem comum para que computadores fora de sua própria rede
+        pudessem se comunicar com computadores em sua própria rede, mesmo sendo uma rede de troca de pacotes segura e
+        confiável. Por conta disso, o protocolo TCP/IP foi criado para possibilitar a comunicação entre as redes.</p>
+        <p>Durante a decada de 1980, esse protocolo foi testado e adotado por muitas redes. Porém seu uso era limitado
+            por pesquisadores, cientistas e programadores para trocar mensagens e informações. Era desconhecida para o
+            público em geral, até o surgimento da web.</p>
+
+        <h3>Web</h3>
+
+        <p><em><a href="https://www.w3.org/People/Berners-Lee/">Tim Berners-Lee</a></em>, um cientista britânico,
+            inventou a <span>World Wide Web <b>(WWW)</b></span> em 1989, enquanto trabalhava no CERN. A ideia básica da
+            WWW era fundir as tecnologias em evolução de computadores, redes de dados e hipertexto em um sistema de
+            informação global poderoso e fácil de usar.</p>
+        
+        
+        <figure>
+            <figcaption>Imagem 2 - Tim Berners-Lee</figcaption>
+            <img id="timberner" src="./img/timberner.jpg" alt="">
+            <figcaption>Fonte: <a href="https://tecnoblog.net/responde/quem-e-tim-berners-lee-conheca-o-criador-da-world-wide-web-www/">https://tecnoblog.net/responde/quem-e-tim-berners-lee-conheca-o-criador-da-world-wide-web-www/</a></figcaption>
+        </figure>
+        
+        <p>Tim Berners-Lee escreveu a primeira proposta para a World Wide Web em março de 1989 e a segunda em maio de
+            1990. <br>
+            No final de 1990, <sub>Tim Berners-Lee</sub> já tinha o primeiro servidor e navegador web em funcionamento
+            no CERN, demonstrando suas ideias. <br>
+            Além dele criar a web que conhecemos hoje, ele <mark>desenvolveu a URL</mark> que nos permite digitar o
+            endereço de uma página para acessá-la.</p>
+
+    </div>
+
+    <hr>
+
+    <h3>Nomes importantes para a história da web:</h3>
+    <ul>
+        <li>Tim Berners-Lee</li>
+    </ul>
+    <dl>
+        <dt>ARPA</dt>
+        <dd>ARPANET</dd>
+    </dl>
+    <ol>
+        <li>World Wide Web</li>
+    </ol>
+
+    <hr>
+
+    <h3>Linha do tempo da web</h3>
+    <table id="tabela-tempo">
+
+        <!--índice, região,  nome, estado, sigla, nome e capital-->
+        <caption>Linha do tempo da web de 2017 até 2025</caption>
+        <thead>
+            <tr>
+                <th>Ano</th>
+                <th>Evento</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>2017</td>
+                <td>W3c e IDPF se unem</td>
+            </tr>
+
+            <tr>
+                <td>2019</td>
+                <td>Tradução autorizada do DWBP</td>
+            </tr>
+
+            <tr>
+                <td>2020</td>
+                <td>A web ganha espaço sideral</td>
+            </tr>
+
+            <tr>
+                <td>2021</td>
+                <td>Fim do Yahoo respostas</td>
+            </tr>
+
+            <tr>
+                <td>2022</td>
+                <td>ChatGPT</td>
+            </tr>
+
+            <tr>
+                <td>2025</td>
+                <td>DeepSeek</td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+
+            <tr>
+                <td colspan="2">Referência: <a href="https://ceweb.br/linhadotempo/">https://ceweb.br/linhadotempo/</a>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+
+</html>

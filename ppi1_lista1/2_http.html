@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP</title>
+    <style>
+        #modeloServidor {
+            border-radius: 10%;
+            max-width: 300px;
+        }
+
+        #requestResponse {
+            max-width: 600px;
+        }
+
+        #titulo {
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="titulo">
+        <h1>Protocolo HTTP</h1>
+    </div>
+    <h2>O que é?</h2>
+    <p>O Protocolo de Transferência de Hipertexto (HTTP) é a base da internet e é usado para carregar páginas web usando
+        links de hipertexto</p>
+    Quando você visita um site, o HTTP é usado para entregar o conteúdo dessa página, exibindo-a em seu navegador. Ele é
+    um protocolo de solicitação-resposta que define como os clientes da Web se comunicam com os servidores da Web.</p>
+
+    <h2>Como ele funciona?</h2>
+    <p>O HTTP funciona em um modelo cliente-servidor, em que um cliente, geralmente um navegador web, faz solicitações a
+        um servidor para obter recursos, como páginas da web, imagens ou arquivos.</p>
+    <div id="modeloServidor">
+        <img id="modeloServidor" src="./img/modeloServidor.png" alt="">
+    </div>
+    <p>Etapas que ocorrem nesse modelo:</p>
+    <ol>
+        <li>O cliente estabelece contato com o servidor, enviando uma requisição HTTP</li>
+        <li>Nessa solicitação, o cliente especifica o método pretendido (por exemplo, GET para obter informações) e o
+            caminho do recurso desejado</li>
+        <li>Ao receber essa requisição, o servidor a processa e responde com uma mensagem HTTP, incluindo o recurso
+            requisitado e informações adicionais no cabeçalho da resposta</li>
+    </ol>
+
+    <h2>O que é request e response na web?</h2>
+    <p>Na web, a comunicação entre cliente e servidor ocorre por meio de duas ações principais: o request (solicitação)
+        e a response (resposta)</p>
+    <p>Ao apertar <i>enter</i> após digitar um endereço no navegador, faz com que o navegador envie uma solicitação
+        (request) para o servidor </p>
+    <p>Passo a passo que compoe esse processo:</p>
+    <ol>
+        <li>O navegador envia um request ao servidor</li>
+        <li>O servidor processa a solicitação.</li>
+        <li>O servidor responde com uma response.</li>
+    </ol>
+    <p>Sem esse ciclo, não haveria uma comunicação eficaz entre o navegador e o servidor, pois ele é fundamental no
+        desenvolvimento de aplicações que atendam às necessidades dos usuários de maneira ágil e confiável.</p>
+
+    <h3>Exemplos de requisições</h2>
+
+        <ul>
+            <li>GET : o verbo HTTP GET é utilizado para a leitura de dados</li>
+            <li>POST : o verbo HTTP POST é normalmente utilizado para a criação de novos dados</li>
+            <li>PUT: o verbo HTTP PUT é utilizado para atualizar dados</li>
+            <li>DELETE : o verbo HTTP DELETE é utilizado para excluir dados</li>
+        </ul>
+        <div id="requestResponse">
+            <img id="requestResponse" src="./img/request-response-2.png" alt="">
+        </div>
+</body>
+
+</html>
