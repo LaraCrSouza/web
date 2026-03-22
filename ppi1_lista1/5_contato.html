@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de contato</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         #titulo {
             font-family: sans-serif;
@@ -51,7 +52,7 @@
             text-align: center;
         }
 
-        #input {
+        #button {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -82,7 +83,7 @@
     </div>
     <div id="instrucoes" class="header-instrucao">
         <p>Preencha todos os campos obrigatórios abaixo <br> Todos com * são obrigatórios. <br>Caso precisar, consulte
-            seu curriculo: <a href="4_curriculo.html">Voltar para curriculo</a></p>
+            seu curriculo: <a href="4_curriculo.html" id="voltarCurriculo">Voltar para curriculo</a></p>
     </div>
 
     <form id="form" action="">
@@ -149,9 +150,9 @@
 
         <br>
 
-        <div id="input">
-            <input type="submit" value="submit">
-            <button>Enviar</button>
+
+        <div id="button">
+            <button type="submit" value="submit">Enviar</button>
         </div>
     </form>
 </body>

@@ -5,19 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTTP</title>
+    
+    <link rel="stylesheet" href="style.css">
+
     <style>
         #modeloServidor {
             border-radius: 10%;
             max-width: 300px;
+            text-align: center;
         }
 
         #requestResponse {
             max-width: 600px;
+            text-align: center;
         }
 
         #titulo {
             font-family: sans-serif;
         }
+
     </style>
 </head>
 
@@ -34,9 +40,13 @@
     <h2>Como ele funciona?</h2>
     <p>O HTTP funciona em um modelo cliente-servidor, em que um cliente, geralmente um navegador web, faz solicitações a
         um servidor para obter recursos, como páginas da web, imagens ou arquivos.</p>
-    <div id="modeloServidor">
+
+    <figure id="modeloServidor">
+        <figcaption>Imagem 1: Modelo cliente-servidor</figcaption>
         <img id="modeloServidor" src="./img/modeloServidor.png" alt="">
-    </div>
+        <figcaption>Fonte: <a href="https://www.canalti.com.br/arquitetura-cliente-servidor/">https://www.canalti.com.br/arquitetura-cliente-servidor/</a></figcaption>
+    </figure>
+    
     <p>Etapas que ocorrem nesse modelo:</p>
     <ol>
         <li>O cliente estabelece contato com o servidor, enviando uma requisição HTTP</li>
@@ -68,9 +78,13 @@
             <li>PUT: o verbo HTTP PUT é utilizado para atualizar dados</li>
             <li>DELETE : o verbo HTTP DELETE é utilizado para excluir dados</li>
         </ul>
-        <div id="requestResponse">
+
+        <figure id="requestResponse">
+            <figcaption>Imagem 2: Request e Response</figcaption>
             <img id="requestResponse" src="./img/request-response-2.png" alt="">
-        </div>
+            <figcaption>Fonte: <a href="https://www.duplod.com.br/o-que-e-o-request-e-response/">https://www.duplod.com.br/o-que-e-o-request-e-response/</a></figcaption>
+        </figure>
+        
 </body>
 
 </html>
