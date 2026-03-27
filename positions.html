@@ -10,6 +10,11 @@
         margin:0px; 
         padding: 0px;}
 
+        .container{
+            position: static;
+            border-color: brown;
+            border-width: 10px;
+        }
         .box{
             display: inline-block;
             width: 100px;
@@ -19,23 +24,26 @@
         
         #box1{background-color: rgb(3, 63, 119);
         position: relative;
-        top: 100px;
-        left: 150px;}
+        left: 50px;
+        top: 300px;}
 
         #box2{background-color: rgb(5, 85, 160);
-        position: static;
-        top: 200px;}
+        position: absolute;
+        opacity: 0.5;
+        text-align: center;
+        top: 300px}
 
-        #box3{background-color: rgb(8, 101, 189);}
+        #box3{background-color: rgb(8, 101, 189);
+        position: fixed; /**relaciona em relação a tela-->**/
+        top: 0px;
+        right:0px;}   
+
         #box4{background-color: rgb(9, 126, 236);
-        position: fixed;
-        bottom: 0px;
-        right: 0px;
         }
+
         #box5{background-color: rgb(8, 136, 255);}
         span:last-child{background-color: pink ;}
 
-        #container{position: relative;}
     </style>
 </head>
 
@@ -49,5 +57,14 @@
         <div id="box5" class="box">5</div>
         <span class="box">6</span>
     </div>
+
+    <!--1-Fluxo textual do HTML
+    display: inlinem block, inline-block-->
+
+    <!--2-Positions: STatic
+    top, botton feft, right-->
+
+    <!--Position static posiciona o elemento com base na posição estatica dele-->
+
 </body>
 </html>
