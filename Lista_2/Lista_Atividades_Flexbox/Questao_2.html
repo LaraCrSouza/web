@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    #layout{
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+        #titulo{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-grow: 1;
+            opacity: 50%;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;  
+            flex-grow: 2;
+        }
+        .box{
+            background-color:gray;
+            opacity: 50%;
+            margin: 5px;
+            border-radius: 5%;
+            height: 15px;
+            width: 150px;
+        }
+        .circulo{
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+
+        }
+        .rodape{
+            background-color: gray;
+            width: 4em;
+            height: 1em;
+            border-radius: 10% 10% 10% 10%;
+            opacity: 50%;
+        }
+        .container2{
+            align-items: center;
+            display: flex;
+            flex-grow: 3;
+            justify-content: flex-end;
+            flex-direction: column;
+        }
+        .containerPrincipal{
+            border: 2px solid rgb(189, 36, 189);
+            height: 300px;
+            width: 170px;
+            justify-content: baseline;
+            align-items: center;
+            flex-direction: column;
+            display: flex;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div id="layout">
+
+        <div class="containerPrincipal">
+
+            <div id="titulo">Company Logo</div>
+            <div class="container">
+                <div class="box" id="box-1"></div>
+                <div class="box" id="box-2"></div>
+                <div class="box" id="box-3"></div>
+                <div class="box" id="box-4"></div>
+            </div>
+
+            <div class="container2">
+                <div class="box circulo" id="box-5"></div>
+                <div class="rodape" id="box-6"></div>
+                <br>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

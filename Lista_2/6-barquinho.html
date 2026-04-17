@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-    
-    body{
-        background-image: url("img/mar.jpg");
-        background-size: cover;  
-    }
 
-    #barco{
+    body{
+        background-image: url(img/25672931-claro-azul-ceu-ilustracao-azul-ceu-nao-nuvem-fundo-projeto-para-fundo-poster-crianca-arte-desenho-animado-vetor.jpg);
+    }
+    .mar{
+         background: radial-gradient(circle, #5278bd, #1a388a);
+        width: 2000px;
+        height: 300px;
+        position: absolute;
+        top: 70%;
+    }
+    .barco{
         font-size: 200px;
         position: absolute;
         z-index: auto;
@@ -19,13 +24,14 @@
         top: 60%; 
         left: 0;
     }
-    #nuvem{
-        background-color: white;
+    
+    .nuvem{
+        background: white;
         width: 200px;
         height: 60px;
         border-radius: 50px 60px 80px 25px;
         box-shadow: 5px 5px 10px #888;
-        position: absolute;
+        position: relative;
         bottom: 70%;
         animation: nuvem 50s linear infinite alternate;
     }
@@ -34,7 +40,9 @@
     background: rgb(255, 255, 255);
     border-radius: 50%; 
     }
+
     #nuvem::before {
+    content: '';
     width: 70px;
     height: 70px;
     top: -30px;
@@ -59,7 +67,7 @@
      @keyframes nuvem {
 
         from{
-            right: -200%;
+            right: -100%;
         }
         to{
             right: 100%;
@@ -80,10 +88,8 @@
     
 </head>
 <body>
-    <div>
-        <span id="mar"></span>
-        <span id="barco">⛵</span>
-        <span id="nuvem"></span>
-    </div>
+    <div class="barco">⛵</div>
+    <div class="nuvem"></div>
+    <div class="mar"></div>
 </body>
 </html>
