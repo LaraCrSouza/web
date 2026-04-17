@@ -5,17 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-    img{
-        width: 20vw;
+    
+    body{
+        background-image: url("img/mar.jpg");
+        background-size: cover;  
+    }
+
+    #barco{
+        font-size: 200px;
+        position: absolute;
+        z-index: auto;
+        animation: movimento 10s linear infinite alternate;
+        top: 60%; 
+        left: 0;
+    }
+    #nuvem{
+        background-color: white;
+        width: 200px;
+        height: 60px;
+        border-radius: 50px 60px 80px 25px;
+        box-shadow: 5px 5px 10px #888;
+        position: absolute;
+        bottom: 70%;
+        animation: nuvem 50s linear infinite alternate;
+    }
+    #nuvem::after, #nuvem::before {
+    content: '';
+    background: rgb(255, 255, 255);
+    border-radius: 50%; 
+    }
+    #nuvem::before {
+    width: 70px;
+    height: 70px;
+    top: -30px;
+    left: 30px;
+    }
+
+    #nuvem::after {
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    right: 30px;
+    }
+   @keyframes movimento {
+    from{
+        left: 100%;
+    }
+    to{
+        right: 100%;;
+    }
+    
+   }
+     @keyframes nuvem {
+
+        from{
+            right: -200%;
+        }
+        to{
+            right: 100%;
+        }
+
+            
+    }
+    @keyframes navegar {
+
+        0%{font-size: 1px;
+        transform: rotate(0deg);}
+
+        100%{font-size: 100px;
+        transform: rotate(360deg);}
     }
     </style>
 
-    }
+    
 </head>
 <body>
     <div>
-        <img id="mar" src="img/mar.jpg" alt="Imagem mar">
+        <span id="mar"></span>
         <span id="barco">⛵</span>
+        <span id="nuvem"></span>
     </div>
 </body>
 </html>
