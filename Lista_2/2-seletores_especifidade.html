@@ -3,9 +3,9 @@
    <title>Exemplo especificidade de seletores</title>
    <style>
       /*regra 1*/ li{color:red;}
-      /*regra 2*/ .churras{color:green;}
-      /*regra 3*/ .fruta{color:gray}
-      /*regra 4*/ li+li.churras{color: black;}
+      /*regra 2*/ .churras{color:green;} /*o que tem a class churras tem a cor verde*/
+      /*regra 3*/ .fruta{color:gray} /*o que tem a class fruta fica cinza*/
+      /*regra 4*/ li+li.churras{color: black;} 
       /*regra 5*/ .churras[draggable="true"]{color: magenta;}
       /*regra 6*/ #lip1,#lip2,#lip3{color:blue}
       /*regra 7*/ #lip3.fruta{color:orange}

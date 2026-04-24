@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .container{
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        .layout{
+            display: flex;
+            gap: 16px;
+            align-items: flex-center;
+        }
+
+        #box-1, #box-2, #box-3, #box-4, #box-5 {
+            height: 370px;
+            margin-bottom: 15px;
+        }
+        .box{
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            border-radius: 40px;
+            align-items: baseline;
+            
+        }
+        #box-1{
+            height: 370px;
+            width: 60px;
+            background-color: rgb(69, 0, 106);
+            background-image: url(imgs/trilha.jpeg);
+        }
+        #box-2{
+            height: 400px;
+            width: 550px;
+            background-color: rgb(69, 0, 106);
+            background-image: url(imgs/neve.jpg);
+            overflow: hidden;
+        }
+        #box-3{
+            height: 370px;
+            width: 60px;
+            background-color: rgb(77, 4, 150);
+            background-image: url(imgs/arvore.jpg);
+        }
+        #box-4{
+            height: 370px;
+            width: 60px;
+            background-color: rgb(2, 11, 74);
+            background-image: url(imgs/neblina.jpg);
+        }
+        #box-5{
+            height: 370px;
+            width: 60px;
+            background-color: rgb(5, 74, 36);
+            background-image: url(imgs/sol.png);
+        }
+        
+        .circulo{
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transform: translateX(-50%);
+            bottom: 15px; 
+        }
+        .conteudo{
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+
+        }
+        #circulo-2{
+           position: relative;
+            left: 0;
+            transform: none;
+            bottom: 0;
+            align-self: flex-end;
+        }
+        #texto h3, #texto p{
+            margin: 0;
+            color: white;
+        }
+
+    
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="layout">
+            <div class="box" id="box-1">
+                <div class="circulo" id="circulo-1">🚶‍➡️</div>
+            </div>
+
+            <div class="box" id="box-2">
+                <div class="conteudo">
+                 <div class="circulo" id="circulo-2">❄️</div>
+                 <span class="texto" id="texto">
+                    <h3>Oretemauw</h3>
+                    <p>Omuke trughte a otufta</p>
+                 </div>    
+            </div>
+
+            <div class="box" id="box-3">
+                <div class="circulo" id="circulo-3">🌳</div>
+            </div>
+
+            <div class="box" id="box-4">
+                <div class="circulo" id="circulo-4">💧</div>
+            </div>
+
+            <div class="box" id="box-5">
+                <div class="circulo" id="circulo-5">☀️</div>
+            </div>
+
+        </div>     
+            
+        </div>
+
+    </div>
+</body>
+</html>

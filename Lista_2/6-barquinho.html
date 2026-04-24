@@ -6,9 +6,20 @@
     <title>Document</title>
     <style>
 
-    body{
-        background-image: url(img/25672931-claro-azul-ceu-ilustracao-azul-ceu-nao-nuvem-fundo-projeto-para-fundo-poster-crianca-arte-desenho-animado-vetor.jpg);
+    
+body{
+    margin: 0;
+    overflow: hidden;
+}
+    .ceu{
+        width: 2000px;
+        height: 600px;
+        background: linear-gradient(white, blue);
+        position: relative;
+        overflow: hidden; 
+         
     }
+    
     .mar{
          background: radial-gradient(circle, #5278bd, #1a388a);
         width: 2000px;
@@ -22,58 +33,59 @@
         z-index: auto;
         animation: movimento 10s linear infinite alternate;
         top: 60%; 
-        left: 0;
+        left: -300px;
+        
+       
     }
     
     .nuvem{
         background: white;
         width: 200px;
         height: 60px;
-        border-radius: 50px 60px 80px 25px;
+        border-radius:50px;
         box-shadow: 5px 5px 10px #888;
-        position: relative;
-        bottom: 70%;
-        animation: nuvem 50s linear infinite alternate;
+        position: absolute;
+        animation: nuvem 15s linear infinite alternate;
+        top: 40%;
+        transform: translateY(-40%);
     }
-    #nuvem::after, #nuvem::before {
-    content: '';
-    background: rgb(255, 255, 255);
-    border-radius: 50%; 
+    .nuvem::before,
+    .nuvem::after {
+    content: "";
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    right: -50px;
+}
+
+
+    .nuvem::before {
+    width: 90px;
+    height: 90px;
+    top: -40px;
+    left: 20px;
     }
 
-    #nuvem::before {
-    content: '';
-    width: 70px;
-    height: 70px;
-    top: -30px;
-    left: 30px;
-    }
-
-    #nuvem::after {
-    width: 100px;
-    height: 100px;
-    top: -50px;
-    right: 30px;
+    .nuvem::after {
+        width: 70px;
+        height: 70px;
+        top: -30px;
+        right: 20px;
     }
    @keyframes movimento {
-    from{
-        left: 100%;
-    }
-    to{
-        right: 100%;;
-    }
+
+    from { left: -10%; }
+    to { left: 100%; }
     
    }
      @keyframes nuvem {
 
-        from{
-            right: -100%;
+        from {
+        left: -300px;
         }
-        to{
-            right: 100%;
+        to {
+            left: 2000px;
         }
-
-            
     }
     @keyframes navegar {
 
@@ -88,8 +100,12 @@
     
 </head>
 <body>
-    <div class="barco">⛵</div>
-    <div class="nuvem"></div>
+    
+   
+    <div class="ceu">
+         <div class="nuvem"></div>
+    </div>
     <div class="mar"></div>
+    <div class="barco">⛵</div>
 </body>
 </html>
