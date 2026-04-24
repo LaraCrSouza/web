@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <style>
+
+        
+        .container {
+            
+            display: grid;
+            height: 100vh;
+            grid-template-areas: "header header header"
+                                 "main   empty  sidebar"
+                                 "footer footer footer";
+        }
+           
+        @media (max-width:700px) {
+            .container {
+            display: grid;
+            height: 100vh;
+
+            grid-template-areas: "header"
+                                 "main"
+                                 "empty"
+                                 "sidebar"
+                                 "footer";
+            }
+        }
+
+        .box{
+            display: flex;
+            border: 1px solid black;
+            border-radius: 20px 20px 20px 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        #box1{
+            background-color: orange;
+            grid-area: header;
+        }
+        #box2{
+            background-color: blue;
+            grid-area: main;
+        }
+        #box3{
+            grid-area: empty;
+        }
+        #box4{
+            background-color: red;
+            grid-area: sidebar;
+        }
+        #box5{
+            background-color: green;
+            grid-area: footer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">header</div>
+        <div class="box" id="box2">main</div>
+        <div class="box" id="box3">empty</div>
+        <div class="box" id="box4">sidebar</div>
+        <div class="box" id="box5">footer</div>
+    </div>
+</body>
+</html>
