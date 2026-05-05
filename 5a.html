@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 100vh;
+            display: grid;
+            gap: 10px;
+            grid-template-rows: 3fr 1fr 4fr 2fr;
+            grid-template-columns: 3fr 2fr 2fr 1fr;
+            grid-template-areas: "laranjaVermelho rosa ciano ciano"
+                "laranjaVermelho rosa verde circulos"
+                "azulEscuro rosa verde circulos"
+                "laranja laranja verde circulos"
+            ;
+        }
+
+
+        .box,
+        .circulo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            border-radius: 5px;
+        }
+
+        #box1 {
+            background-color: orangered;
+            grid-area: laranjaVermelho;
+        }
+
+        #box2 {
+            background-color: rgb(59, 59, 245);
+            grid-area: azulEscuro;
+        }
+
+        #box3 {
+            background-color: orange;
+            grid-area: laranja;
+        }
+
+        #box4 {
+            background-color: pink;
+            grid-area: rosa;
+        }
+
+        #box5 {
+            background-color: aquamarine;
+            grid-area: ciano;
+        }
+
+        #box6 {
+            background-color: rgb(67, 255, 67);
+            grid-area: verde;
+        }
+
+        #box7 {
+            grid-area: circulos;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 60px
+        }
+
+        .circulo {
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+        }
+
+
+        #circulo1 {
+            background-color: red;
+
+        }
+
+        #circulo2 {
+            background-color: palevioletred;
+        }
+
+        #circulo3 {
+            background-color: rgb(188, 255, 188);
+        }
+
+        #circulo4 {
+            background-color: grey;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+        <div class="box" id="box5"></div>
+        <div class="box" id="box6"></div>
+        <div class="box" id="box7">
+            <div class="circulo" id="circulo1"></div>
+            <div class="circulo" id="circulo2"></div>
+            <div class="circulo" id="circulo3"></div>
+            <div class="circulo" id="circulo4"></div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

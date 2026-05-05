@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            background-color: rgb(196, 192, 192);
+            margin: 0;
+        }
+
+       
+        .container{
+            background-color: white;
+            padding: 5px;
+            display: grid;
+            height: 100vh;
+            gap: 5px;
+            grid-template-columns: 1fr 6fr 1fr;
+            grid-template-rows: 2fr 2fr 6fr 2fr 1fr;
+            grid-template-areas: "header header header"
+                                 "left banner right"
+                                 "left main right"
+                                 "left low right"
+                                 "footer footer footer";
+        }
+        @media(max-width:600px){
+                .container{
+                background-color: white;
+                padding: 5px;
+                display: grid;
+                height: 100vh;
+                gap: 5px;
+                grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                grid-template-columns: 1fr;
+                grid-template-areas: "header"
+                                     "banner"
+                                     "left"
+                                     "main"
+                                     "right"
+                                     "low"
+                                     "footer";
+            }
+        }
+        .box{
+            display: flex;
+            color: black;
+            background-color: rgb(56, 56, 56);
+            border-radius: 5px;
+            padding: 10px;
+            align-items: flex-start;    
+            justify-content: flex-start; 
+        }
+        
+        #header{
+            grid-area: header;
+            background-color: yellow;
+            justify-content: center;
+        }
+        #banner{
+            grid-area: banner;
+            background-color: red;
+            justify-content: center;
+            align-items: center;
+        }
+        #main{
+            grid-area: main;
+            background-color: blue;
+            justify-content: center;  
+            align-items: center;      
+        }
+
+        #low{ 
+            grid-area: low;
+            background-color: green; 
+        }
+        #left{ 
+            grid-area: left;
+            background-color: green;
+        }
+        #footer { 
+            grid-area: footer; 
+            background-color: blue;
+            justify-content: center;
+        }
+        #right { 
+            grid-area: right; 
+            background-color: yellow;
+        }
+        .container2{
+            grid-area: box;
+            display: grid;
+            background-color: rgb(56, 56, 56);
+            gap: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas:
+                "E F G"
+                "M I J";
+
+        }
+         #box, .box2 {
+            display: flex;
+            align-items: flex-start;
+            padding: 8px;
+            background-color: rgb(200, 200, 200);
+            border-radius: 5px;
+        }
+       
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="header">Header</div>
+        <div class="box" id="banner">Banner</div>
+        <div class="box" id="left">Left Aside</div>
+        <div class="box" id="main">
+            <div>
+                <p>Main Content</p> 
+                <p>Width: 916, Height: 873</p>
+            </div>
+        </div>
+        <div class="box" id="right">Right Aside</div>
+        <div class="box" id="low">Low Content</div>
+        <div class="box" id="footer">Footer</div>
+    </div>
+</body>
+</html>

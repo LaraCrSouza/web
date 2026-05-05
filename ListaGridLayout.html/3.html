@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            height: 100vh;
+            gap: 10px;
+            grid-template-columns: 2fr 1fr 3fr 1fr;
+            grid-template-rows: 1fr 2fr 2fr ;
+            grid-template-areas: "A A . B"
+                                 "C box box box"
+                                 "C box box box";
+        }
+        .box{
+            display: flex;
+            background-color: rgb(56, 56, 56);
+            border-radius: 5px;
+            padding: 10px;
+            color: white;
+        }
+        .box2{
+            display: flex;
+            background-color: gray;
+            gap: 10px;
+            border-radius: 5px;
+            grid-template-areas: "E F G"
+                                 "M I J";
+        }
+        #box-A{
+            grid-area: A;
+        }
+        #box-B{
+            grid-area: B;
+        }
+        #box-C{
+            grid-area: C;
+        }
+        #box-E { 
+            grid-area: E; 
+        }
+        #box-F { 
+            grid-area: F; 
+        }
+        #box-G { 
+            grid-area: G; 
+        }
+        #box-M { 
+            grid-area: M; 
+        }
+        #box-I { 
+            grid-area: I; 
+        }
+        #box-J { 
+            grid-area: J; 
+        }
+        .container2{
+            grid-area: box;
+            display: grid;
+            background-color: rgb(56, 56, 56);
+            gap: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas:
+                "E F G"
+                "M I J";
+
+        }
+         #box, .box2 {
+            display: flex;
+            align-items: flex-start;
+            padding: 8px;
+            background-color: rgb(200, 200, 200);
+            border-radius: 5px;
+        }
+       
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box-A">A</div>
+        <div class="box" id="box-B">B</div>
+        <div class="box" id="box-C">C</div>
+        <div class="container2">
+            <div class="box2" id="box-E">E</div>
+            <div class="box2" id="box-F">F</div>
+            <div class="box2" id="box-G">G</div>
+            <div class="box2" id="box-M">M</div>
+            <div class="box2" id="box-I">I</div>
+            <div class="box2" id="box-J">J</div>
+        </div>
+    </div>
+</body>
+</html>

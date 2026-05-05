@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: rgb(244, 179, 179);
+        }
+
+        h4:hover {
+            color: red;
+        }
+
+        .coelho {
+            position: relative;
+            background-color: white;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+        }
+
+        .coelho::before {
+            content: "";
+            background-color: white;
+            position: absolute;
+            border-radius: 20% 20% 0 0;
+            height: 60px;
+            width: 20px;
+            transform: rotate(-20deg);
+            top: -30px;
+            left: 5px;
+        }
+
+        .coelho::after {
+            content: "";
+            background-color: white;
+            position: absolute;
+            border-radius: 20% 20% 0 0;
+            height: 60px;
+            width: 20px;
+            transform: rotate(20deg);
+            top: -30px;
+            left: 30px;
+        }
+
+        .gato {
+            font-size: 100px;
+            animation: movimento 3s alternate infinite;
+        }
+
+        @keyframes movimento {
+            from {
+                transform: translate(100%);
+            }
+
+            to {
+                transform: translate(-1%);
+            }
+        }
+
+        p {
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Regra CSS</h1>
+    <p>A regra CSS define o estilo visual utilizado em uma página web, com personalização das cores, imagens, tamanhos,
+        posições, espaçacamento e fontes.
+        Para tornar isso possível, o CSS possui seletores, propriedades e valores. Por exemplo:
+    </p>
+
+    <pre>
+        &lt;style&gt;
+
+        h1, h2{
+            text-align: center;
+        }
+        p{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        img{
+            height: 40px;
+            width:40px;
+        }
+        &lt;/style&gt;
+    </pre>
+
+    <p>No exemplo acima, é utilizado a tag &lt;style&gt; para colocar a regra CSS e estilizar a página. E onde se
+        encaixa os seletores, propriedades e valores no exemplo?</p>
+
+    <dl>
+        <dt>Seletores - Define qual parte da regra você quer estilizar</dt>
+        <dd>h1, h2{}</dd>
+        <dd>p{}</dd>
+        <dd>img{}</dd>
+
+        <br>
+
+        <dt>Propriedades - O que você deseja alterar no seletor</dt>
+
+        <dd>text-align:</dd>
+        <dd>font-family:</dd>
+        <dd>height:</dd>
+        <dd>width:</dd>
+
+        <br>
+
+        <dt>Valores - Como o elemento vai ser alterado</dt>
+
+        <dd>center:</dd>
+        <dd>Verdana, Geneva, Tahoma, sans-serif;</dd>
+        <dd>40px;</dd>
+        <dd>10px;</dd>
+    </dl>
+
+    <p>Além disso, a regra CSS possui pseudo classe (palavra chave adicionada a um seletor que define seu estado),
+        pseudo elemento (Palavra chave adicionada a um seletor que permiti estilizá-lo em partes específicas),
+        e animação simples (palavra chave que adiciona animação a um seletor)
+    </p>
+
+    <p>Utilizando como exemplo uma frase de Alice no país das maravilhas,
+        mudando o titulo de cor ao passar o mouse, criando um coelho com ::before::after e criando uma animação de um
+        emoji:</p>
+
+    <h4>Alice no país das maravilhas</h4>
+
+    <p>"Entenda os seus medos, mas jamais deixe que eles sufoquem os seus sonhos".</p>
+
+    <br>
+
+    <div class="coelho"></div>
+
+    <div class="gato">😺</div>
+
+    <pre>
+    <p>No style fica assim:</p>
+        &lt;style&gt;
+            body{
+                background-color: rgb(244, 179, 179);
+            }
+            h4:hover{
+                color: red;
+            }
+            .coelho{
+                position: relative;
+                background-color: white;
+                border-radius: 50%;
+                height: 50px;
+                width: 50px;
+            }
+            .coelho::before{
+                content: "";
+                background-color: white;
+                position: absolute;
+                border-radius: 20% 20% 0 0;
+                height: 60px;
+                width: 20px;
+                transform: rotate(-20deg);
+                top: -30px;
+                left: 5px;
+            }
+            .coelho::after{
+                content: "";
+                background-color: white;
+                position: absolute;
+                border-radius: 20% 20% 0 0;
+                height: 60px;
+                width: 20px;
+                transform: rotate(20deg);
+                top: -30px;
+                left: 30px;
+            }
+            .gato{
+                font-size: 100px;
+                animation: movimento 3s alternate infinite;
+            }
+
+            @keyframes movimento{
+                from{
+                    transform: translate(100%);
+                }
+                to{
+                    transform: translate(-1%);
+                }
+            }
+        &lt;/style&gt;
+    </pre>
+</body>
+
+</html>
