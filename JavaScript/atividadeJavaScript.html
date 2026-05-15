@@ -36,6 +36,20 @@
         media=(nota1+nota2)/2
 
         document.body.innerHTML = `<p> <i> A média do aluno foi ${media} </i> </p>`
+            if (media >= 6) {
+        console.log(`${nome} aprovado com média ${media}.`);
+        } else {
+        console.log(`${nome} reprovado com média ${media}.`);
+        }
+
+        function ehPar(numero){
+            if(numero%2==0){
+                return true;
+            }
+            else{
+                false;
+            }
+        }
 
 
 
