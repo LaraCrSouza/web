@@ -6,20 +6,105 @@
     <title>Document</title>
 </head>
 <body>
+<h1>JS</h1>
 
+    <div>
+        <p>Tipos Primitivos do JS</p>
+        <ul>
+            <li>String</li>
+            <li>Number</li>
+            <li>UnderFind</li>
+            <li>Boolean</li>
+            <li>null</li>
+        </ul>
+
+        <p>Como declarar variáveis</p>
+        <p>Usamos let ou var para declarar váriaveis</p>
+        <code>
+            var nome; //cria uma variável global com identificador nome
+            <br>
+            let idade; //cria uma variável local com identificador idade
+        </code>
+
+        <p>Funções em JavaScript</p>
+        <code class="language-javascript">
+            function nomeDaFuncao(){
+                //codigo da função
+            }
+        </code>
+
+    </div>
+
+    <div>
+        <p>Tratamento de eventos em JavaScript</p>
+
+        <p>Tratamos evento em js usando <code>addEventListener</code> que vincula uma função a um eveneto específico do DOM.</p>
+        <p>Exemplo</p>
+        <code class="language-javascript">
+            document.addEventListener('click', function(){
+                console.log('Clique detectado!');
+            });
+        </code>
+
+        <p>Eventos Comuns disponiveis nos Navegadores</p>
+        <ul>
+            <li>Click - evento de clique</li>
+            <li>mouseOver - eveneto de mouse sobre o elemento</li>
+            <li>mouseOut - eveneto de mouse fora do elemento</li>
+            <li>mouseenter - evento de mouse entrando no elemento</li>
+            <li>keypress - evento de tecla pressionada</li>
+            <li>keydown - evento de tecla pressionada</li>
+            <li>keyup - evento de tecla solta</li>
+            <li>submit - evento de envio de formulário da tag form</li>
+            <li>DOMContentLoaded - evento disparado quando o documento HTML é completamente carregado e parseado</li>
+            <li>change - eveneto disparado quando o valor de um elemento de formulário</li>
+        </ul>
+    </div>
     <script>
-       let nome = prompt("Informe seu nome"); //ou  prompt("Informe seu nome", "José"); 
-       alert(nome);
 
-       let a = prompt("Informe um valor de A")
-       let b = prompt("Informe um valor de B")
-       let numero1 = Number(a);
-       let numero2 = Number(b);
-        // let numero1 = parseInt("Olamundao123");
-        // let numero2 = parseInt(b);
-       const soma = numero1+numero2;
-       alert(soma)
+        if (true){
+            var nome = "João";
+            let idade = 30;
+        }
+        // console.log(nome); //Imprime "João"
+       // console.log(idade);//Erro: idade is not defined
 
+        function soma(a,b){
+            return a + b;
+        }
+
+        function somaInteiros(a,b){
+            if (Number.isInteger(a) && Number.isInteger(b)){
+                return a + b;
+            }
+            throw new Error("Os argumentos devem ser inteiros");
+        }
+        //função anônima
+        ()=>{
+
+        }
+
+        //Declaramos uma função para escrever uma msg
+        function tratamentoMouseOver(){
+            console.log("mouse sobre o corpo do documewnto")
+        }
+
+        //vinculamos a funçlão ao evento mouseOver do corpo do documento
+        document.body;addEventListener('mouseOver', tratamentoMouseOver);
+        document.body.addEventListener('mouseout', ()=> {console.log('Mouse sai do corpo do dcumento')})
+
+        document.body.addEventListener('mouseover', ()=>{
+            console.log("mouse sobre o corpo do documento");
+            
+        })
+
+        document.addEventListener('keypress', function(event){
+            console.log('Evento keypress: ' + event.key);
+            
+        });
+        document.addEventListener('keydown', function(event){
+            console.log('Evento keydown: ' + event.ky);
+        });
 
     </script>
 
