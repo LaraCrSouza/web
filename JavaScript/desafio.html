@@ -46,7 +46,7 @@
         let ctx = canvas.getContext("2d");
         canvas.addEventListener('mousedown', (e)=>{
             desenhando=!desenhando
-            ctx=moveTo(e.offsetX, e.offsetY);
+            ctx.moveTo(e.offsetX, e.offsetY);
         })
         canvas.addEventListener('mouseup', (e)=>{
             desenhando=!desenhando

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="palavra"></label>
+    <input type="text" id="palavra">
+
+    <button id="verificar">Verificar</button>
+
+    <div id ="resultado"></div>
+
+    <script>
+
+        let verificar = document.getElementById("#verificar")
+        let palavra = document.querySelector("#palavra")
+        let resultado = document.querySelector("#resultado")
+
+        
+
+        verificar.addEventListener("click", ()=>{
+
+        let palavra2 = palavra.value.toLowerCase()
+
+        let palavraMin = palavra2.split("").reverse().join("");
+
+            if (palavraMin == palavra2) {
+                resultado.innerHTML = "é um palíndromo";
+            } else {
+                resultado.innerHTML = "não é um palíndromo"
+            }
+            
+         })
+    
+
+    </script>
+</body>
+</html>
