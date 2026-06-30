@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <label for="inicio">Informe o valor inicial</label>
+    <input type="number" id="inicio">
+
+    <label for="fim">Informe o valor máximo</label>
+    <input type="number" id="fim">
+
+    <button id="botao">Verificar</button>
+
+    <div id="resultadoPrimos"></div>
+
+    <script>
+
+        function ehPrimo(num) {
+
+            if (num <= 1) return false;
+
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0)
+                    return false;
+            }
+            return true;
+        }
+        let botao = document.getElementById("botao");
+
+        botao.addEventListener("click", () => {
+
+            let inicio = Number(document.getElementById("inicio").value);
+            let fim = Number(document.getElementById("fim").value);
+
+            if (inicio > fim) {
+                let aux = inicio;
+                inicio = fim;
+                fim = aux;
+            }
+
+            if (inicio > fim) {
+                alert("O valor inicial deve ser menor que o final.");
+                return;
+            }
+
+            let resultado = "";
+
+            for (let i = inicio; i <= fim; i++) {
+
+                if (ehPrimo(i)) {
+                    resultado += i + " ";
+                }
+
+            }
+
+            if (resultado === "") {
+                resultado = "Nenhum número primo encontrado.";
+            }
+
+            document.getElementById("resultadoPrimos").textContent = resultado;
+
+
+
+        });
+
+
+
+    </script>
+</body>
+
+</html>

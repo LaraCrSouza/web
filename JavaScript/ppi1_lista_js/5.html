@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>SORTEIO DE NUMEROS</h1>
+    <div>
+
+
+        <label for="valorMin">Informe o valor minimo</label>
+        <input type="number" name="" id="min">
+
+        <label for="ValorMax">Informe o valor máximo</label>
+        <input type="number" id="max">
+
+        <button id="botao">Sortear</button>
+
+        <p id="Resultado"></p>
+
+    </div>
+
+
+    <script>
+
+        function sortearNumero(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        let sorteado = [];
+
+        let button = document.querySelector("#botao")
+
+        button.addEventListener("click", () => {
+
+            let min = Number(document.getElementById("min").value);
+            let max = Number(document.getElementById("max").value);
+
+            if (min > max) {
+                alert("O valor mínimo deve ser menor que o máximo.");
+                return;
+            }
+
+            let numero = sortearNumero(min, max);
+
+            document.getElementById("Resultado").textContent =
+                "Número sorteado: " + numero;
+
+        });
+        console.log(sortearNumero(1, 100));
+
+    </script>
+
+</body>
+
+</html>
