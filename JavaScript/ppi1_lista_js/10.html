@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: lightblue;
+        }
+
+        #visor {
+            grid-area: visor;
+            height: 80px;
+            font-size: 40px;
+            text-align: right;
+            color: bisque;
+            background-color: black;
+        }
+
+        button {
+            height: 60px;
+            font-size: 25px;
+        }
+
+        .container {
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .igual {
+            grid-area: igual;
+            background: orange;
+            color: white;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 80px 80px 80px 80px;
+            grid-template-areas:
+                "visor visor visor visor"
+                "adicao sub mult divisao"
+                "sete oito nove igual"
+                "quatro cinco seis igual"
+                "um dois tres igual"
+                "zero ponto AC igual";
+        }
+
+
+        #adicao {
+            grid-area: adicao;
+            background-color: gray;
+
+        }
+
+        #sub {
+            grid-area: sub;
+            background-color: gray;
+        }
+
+        #mult {
+            grid-area: mult;
+            background-color: gray;
+        }
+
+        #div {
+            grid-area: divisao;
+            background-color: gray;
+        }
+
+        #sete {
+            grid-area: sete;
+        }
+
+        #oito {
+            grid-area: oito;
+        }
+
+        #nove {
+            grid-area: nove;
+        }
+
+        #quatro {
+            grid-area: quatro;
+        }
+
+        #cinco {
+            grid-area: cinco;
+        }
+
+        #seis {
+            grid-area: seis;
+        }
+
+        #um {
+            grid-area: um;
+        }
+
+        #dois {
+            grid-area: dois;
+        }
+
+        #tres {
+            grid-area: tres;
+        }
+
+        #zero {
+            grid-area: zero;
+        }
+
+        #ponto {
+            grid-area: ponto;
+        }
+
+        #AC {
+            grid-area: AC;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <input type="text" id="visor" value="0" readonly>
+
+        <button id="adicao">+</button>
+        <button id="sub">-</button>
+        <button id="mult">x</button>
+        <button id="div">÷</button>
+
+        <button id="sete">7</button>
+        <button id="oito">8</button>
+        <button id="nove">9</button>
+        <button class="igual">=</button>
+
+        <button id="quatro">4</button>
+        <button id="cinco">5</button>
+        <button id="seis">6</button>
+
+        <button id="um">1</button>
+        <button id="dois">2</button>
+        <button id="tres">3</button>
+
+        <button id="zero">0</button>
+        <button id="ponto">.</button>
+        <button id="AC">AC</button>
+    </div>
+
+    <script>
+        let visor = document.getElementById("visor");
+
+        let num1 = 0;
+        let operador = "";
+        let novoNumero = false;
+
+        let resultado;
+
+        document.getElementById("sete").addEventListener("click", () => adicionarNumero(7));
+        document.getElementById("oito").addEventListener("click", () => adicionarNumero(8));
+        document.getElementById("nove").addEventListener("click", () => adicionarNumero(9));
+        document.getElementById("quatro").addEventListener("click", () => adicionarNumero(4));
+        document.getElementById("cinco").addEventListener("click", () => adicionarNumero(5));
+        document.getElementById("seis").addEventListener("click", () => adicionarNumero(6));
+        document.getElementById("um").addEventListener("click", () => adicionarNumero(1));
+        document.getElementById("dois").addEventListener("click", () => adicionarNumero(2));
+        document.getElementById("tres").addEventListener("click", () => adicionarNumero(3));
+        document.getElementById("zero").addEventListener("click", () => adicionarNumero(0));
+        document.getElementById("ponto").addEventListener("click", () => adicionarNumero("."));
+
+        document.getElementById("adicao").addEventListener("click", () => escolherOperacao("+"));
+        document.getElementById("sub").addEventListener("click", () => escolherOperacao("-"));
+        document.getElementById("mult").addEventListener("click", () => escolherOperacao("x"));
+        document.getElementById("div").addEventListener("click", () => escolherOperacao("÷"));
+
+        document.querySelector(".igual").addEventListener("click", calcular);
+        document.getElementById("AC").addEventListener("click", limpar);
+
+        function adicionarNumero(numero) {
+
+            if (visor.value === "0" || novoNumero) {
+                visor.value = numero;
+                novoNumero = false;
+            } else {
+                visor.value += numero;
+            }
+
+        }
+
+        function escolherOperacao(op) {
+
+            num1 = Number(visor.value);
+            operador = op;
+            novoNumero = true;
+
+        }
+        function calcular() {
+
+            let num2 = Number(visor.value);
+            let resultado;
+
+            switch (operador) {
+
+                case "+":
+                    resultado = num1 + num2;
+                    break;
+                case "-":
+                    resultado = num1 - num2;
+                    break;
+
+                case "x":
+                    resultado = num1 * num2;
+                    break;
+
+                case "÷":
+                    resultado = num1 / num2;
+                    break;
+            }
+            visor.value = resultado;
+            console.log(resultado);
+        }
+        function limpar() {
+
+            visor.value = "0";
+            num1 = 0;
+            operador = "";
+            novoNumero = false;
+
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>

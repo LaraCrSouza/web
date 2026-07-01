@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="nameInput" placeholder="Digite seu nome">
+    <button id="saveButton">Salvar</button>
+    <p id="greeting"></p>
+
+</body>
+
+<script>
+
+    let input = document.getElementById("nameInput");
+    let botao = document.getElementById("saveButton")
+    let greeting = document.getElementById("greeting");
+
+
+    let nome = localStorage.getItem("nome");
+
+    if (nome) {
+        input.value = nome;
+        greeting.textContent = "Olá, " + nome + "!";
+    }
+    botao.addEventListener("click", () => {
+        localStorage.setItem("nome", input.value);
+        greeting.textContent = "Olá, " + input.value + "!";
+    });
+
+
+
+</script>
+
+</html>

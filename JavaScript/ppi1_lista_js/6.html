@@ -21,22 +21,37 @@
 
     <script>
 
-        function ehPrimo(num) {
 
-            if (num <= 1) return false;
+        let verificar = document.getElementById("botao");
+        let inicioI = document.querySelector("#inicio");
+        let fimI = document.querySelector("#fim");
+        let resultadoPrimosI = document.querySelector("#resultadoPrimos");
 
-            for (let i = 2; i <= Math.sqrt(num); i++) {
-                if (num % i === 0)
-                    return false;
+        function ehPrimo(n) {
+
+            if (n <= 1) {
+                return false;
             }
+            let limite = Math.sqrt(n);
+
+            for (let i = 2; i <= limite; i++) {
+
+                if (n % i === 0) {
+                    return false;
+                }
+
+            }
+
             return true;
-        }
-        let botao = document.getElementById("botao");
+        };
 
-        botao.addEventListener("click", () => {
 
-            let inicio = Number(document.getElementById("inicio").value);
-            let fim = Number(document.getElementById("fim").value);
+        verificar.addEventListener("click", () => {
+
+            let inicio = Number(inicioI.value);
+            let fim = Number(fimI.value);
+
+            resultadoPrimosI.innerHTML = "";
 
             if (inicio > fim) {
                 let aux = inicio;
@@ -44,28 +59,14 @@
                 fim = aux;
             }
 
-            if (inicio > fim) {
-                alert("O valor inicial deve ser menor que o final.");
-                return;
-            }
-
-            let resultado = "";
-
             for (let i = inicio; i <= fim; i++) {
-
-                if (ehPrimo(i)) {
-                    resultado += i + " ";
+                if (ehPrimo(i) === true) {
+                    let p = document.createElement("p");
+                    p.innerHTML = i;
+                    resultadoPrimosI.appendChild(p);
                 }
 
             }
-
-            if (resultado === "") {
-                resultado = "Nenhum número primo encontrado.";
-            }
-
-            document.getElementById("resultadoPrimos").textContent = resultado;
-
-
 
         });
 

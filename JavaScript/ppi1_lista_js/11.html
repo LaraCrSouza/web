@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <button id="alertButton">Clique aqui</button>
+    <input type="text" id="textInput" placeholder="Digite algo">
+    <div id="hoverDiv">Passe o mouse aqui</div>
+    <select id="colorSelect">
+        <option value="">Escolha uma cor</option>
+        <option value="blue">Azul</option>
+        <option value="green">Verde</option>
+        <option value="red">Vermelho</option>
+    </select>
+</body>
+
+<script>
+
+
+    let botao = document.getElementById("alertButton");
+    let text = document.getElementById("textInput")
+    let hover = document.getElementById("hoverDiv")
+    let seletor = document.getElementById("colorSelect")
+
+    botao.addEventListener("click", () => {
+        alert("Erro no sistema")
+    })
+
+    text.addEventListener('keydown', function (event) {
+        console.log('Evento keydown: ' + event.key);
+    });
+
+    text.addEventListener("focus", function () {
+        text.style.backgroundColor = "yellow";
+    });
+
+    text.addEventListener("blur", function () {
+        text.style.backgroundColor = "white";
+    });
+
+    hover.addEventListener("mouseover", function () {
+        hover.style.backgroundColor = "pink";
+    });
+
+    hover.addEventListener("mouseout", function () {
+        hover.style.backgroundColor = "white";
+    });
+
+    seletor.addEventListener("change", function () {
+        document.body.style.backgroundColor = seletor.value;
+    });
+
+</script>
+
+</html>

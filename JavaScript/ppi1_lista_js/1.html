@@ -1,11 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>O que é JavaScript?</title>
 </head>
+
 <body>
-    navegador roda no sandbox e o servidor não.
+    <h1 id="titulo">O que é JavaScript?</h1>
+
+    <h2 id="tituloII">Motivação para a criação do JavaScript</h2>
+    <p id="paragrafoM"> Antigamente a web era centrada em texto plano através da linguagem de marcação HTML, que
+        representava a
+        estrutura e conteudo de uma pagina Web.
+        Porém, um dos problemas dessa linguagem é que essas páginas web eram estáticas. Então para dar mais vida ao HTML
+        e permitir que essas páginas fossem mais dinâmicas,
+        o Brendan Eich foi recrutado em 1995, para ser um dos programadores da NCC. Ele foi o criador do javaScript que
+        seria “cola” entre o HTML e o resto dos sistemas.
+    </p>
+
+    <h2 id="tituloII"> Diferença entre execução no navegador e no servidor</h2>
+
+    <p id="paragrafoI">A diferença entre eles está onde o código é processado, ou seja, quando é trabalhado no "lado
+        navegador" o código
+        é executado no navegador. Quando é trabalhado "no lado do servidor", o código é executado no servidor.</p>
+
+    <h2>Conceito de sandbox no navegador.</h2>
+    <p id="paragrafoII">Sandbox é um mecanismo de segurança usado para executar um aplicativo em um ambiente restrito.
+        Ele impede que
+        ameaças acessem os computadores, os arquivos ou o resto do sistema operacional. </p>
+
+    <h2>document, console e alert</h2>
+
+    <p id="paragrafoII">Document: O objeto global document permite acessar, modificar, criar ou deletar elementos HTML
+        através de
+        JavaScript; <br>
+
+        console: O objeto global console fornece acesso ao console de ferramentas de desenvolvedor do navegador. Pode
+        ser usado para inspecionar variáveis, objetos e rastrear possíveis erros; <br>
+
+        alert: o objeto global alert exibe um popup modal na tela com uma mensagem e um botão de "OK". Até que o usuário
+        feche essa caixa de mensagem, ele bloqueia a interação com o resto da página. </p>
+
+    <p id="paragrafoHora"></p>
+
+    <script>
+
+        console.log("Página carregada com sucesso!");
+
+        alert("Olá mundão perdido");
+
+        let horaAtual = "22:07";
+
+        document.getElementById("paragrafoHora").innerHTML = "A hora atual é: " + horaAtual;
+
+
+    </script>
+
 </body>
+
 </html>
